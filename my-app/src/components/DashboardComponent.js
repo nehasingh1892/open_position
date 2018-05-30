@@ -26,12 +26,11 @@ class DashboardComponent extends React.Component{
 
     render(){
         const that= this;
+        debugger;
         const displayPosition= that.props.positions.map((item, index) => {
             return (
                 <div>
-                    <div><button onClick={this.handleOnClick} type="button" className="btn btn-primary addposition">
-                        Add position
-                    </button></div>
+
                     <PositionListItem key={index} onClick={this.onClick} position={item} jobIndex={index} />
                     <button type="button" className="btn-primary">Remove this position</button>
                 </div>
@@ -42,12 +41,14 @@ class DashboardComponent extends React.Component{
 
                 <div className="main-container">
                     <div className="left-container">
-                    <div className="user-details">user details here</div>
+                    <div className="user-details">{that.props.userDetails.name}</div>
                     </div>
 
                     <div className="right-container">
                         <div className="position-list">
-                            {displayPosition}
+                            <div><button onClick={this.handleOnClick} type="button" className="btn btn-primary addposition">
+                                Add position
+                            </button></div> {displayPosition}
                         </div>
                     </div>
                 </div>
