@@ -1,0 +1,154 @@
+.App, .LoginWrapper {
+    text-align: center;
+}
+.AddPosition{
+    text-align: left;
+}
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.deactivated {
+    background-color: green;
+    color: white;
+}
+
+.activated {
+    color: black;
+    background-color: #ddd;
+}
+
+.container-box {
+    margin-top: 25px;
+}
+/*Header*/
+.navbar.navbar-default {
+    min-height: 60px;
+}
+.navbar-default .navbar-nav>li>a {
+    padding-top: 20px;
+    font-weight: bold;
+}
+.project-name {
+    margin: 2px 0 10px 0;
+    font-size: 19px;
+}
+.project-name, .position-number {
+    color: #1f5120;
+}
+.panel-heading .panel-title {
+    color: #1f5120;
+}
+.panel-heading .btn-success {
+    margin-top: 10px;
+    float: right;
+}
+.main-container {
+    display: table;
+    width: 100%;
+}
+.left-container, .right-container {
+    display: table-cell;
+    padding: 15px;
+    border: 1px solid #d6e9c6;
+    vertical-align: top;
+}
+.left-container {
+    width: 31%;
+}
+.right-container {
+    width: 67%;
+}
+.panel.panel-success>.panel-heading {
+    cursor: pointer;
+    background-color: #d5eecb;
+}
+.panel-success>.panel-heading:hover {
+    box-shadow: 0 0px 4px 3px #9aa4a3;
+}
+
+.bordered-box, .bs-callout {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+.bs-callout {
+    padding-bottom: 5px;
+    border-left-width: 5px;
+    border-left-color: #45a247;
+    margin-bottom: 20px;
+}
+.bs-callout p {
+    font-weight: bold;
+}
+.bs-callout .table {
+    margin-bottom: 10px;
+}
+.LoginWrapper input[type=text],.LoginWrapper input[type=password],.LoginWrapper input[type=email],.LoginWrapper input[type=number] {
+    width: 100%!important;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.LoginWrapper .btn-default,.LoginWrapper .btn-primary{
+    margin-right: 10px;
+    width:20%;
+    white-space: normal;
+}
+.container .addposition{
+    margin-bottom: 30px!important;
+}
+.container {
+    padding: 16px;
+}
+
+.LoginWrapper .form-group label{
+    color:white;
+    margin-left: 12px;
+}
+
+.LoginWrapper .form-group span{
+    color:orange!important;
+}
+.LoginWrapper h1{
+    margin-bottom: 40px;
+    color:white;
+    text-align: center;
+}
+.LoginWrapper h1 b{
+    margin-top:20px;
+}
+.LoginWrapper form{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+body .LoginWrapper{font-family: Arial, Helvetica, sans-serif;}
