@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
 import PositionListItem from './PositionListItem';
 import '../data.json';
-import axios from 'axios';
-import getAllOpenPositions from '../Actions/PositionListActions'
+
 
 class DashboardComponent extends React.Component{
 
     constructor(props){
         super(props);
+        this.handleOnClick = this.handleOnClick.bind(this);
     }
 
     componentDidMount(){
@@ -20,11 +20,18 @@ class DashboardComponent extends React.Component{
             .catch(error => {console.log(error);});
     }
 
+    handleOnClick = () => {
+        this.props.history.push('/add')
+    }
+
     render(){
         const that= this;
         const displayPosition= that.props.positions.map((item, index) => {
             return (
                 <div>
+                    <div><button onClick={this.handleOnClick} type="button" className="btn btn-primary addposition">
+                        Add position
+                    </button></div>
                     <PositionListItem key={index} onClick={this.onClick} position={item} jobIndex={index} />
                     <button type="button" className="btn-primary">Remove this position</button>
                 </div>
