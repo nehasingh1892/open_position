@@ -1,8 +1,16 @@
 import { combineReducers } from 'redux'
-import positionListReducer from './positionListReducer'
+import positionListReducer from './positionListReducer';
+import userListReducer from './userListReducer';
+import {reducer as formReducer} from 'redux-form';
 
-const positionReducer = combineReducers({
-    positionListReducer
+/*import { reducer as testSaga } from '../sagas/testSaga/reducer'*/
+
+
+const Reducer = combineReducers({
+    positions : positionListReducer,
+    userDetails : userListReducer,
+    /*testSaga,*/
+    form: formReducer
 })
 
-export default positionReducer;
+export default Reducer;

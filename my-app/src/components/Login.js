@@ -1,7 +1,9 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
+/*
 import {SubmissionError} from 'redux-form';
-import '../css/MyApp.css'
+*/
+import '../css/myApp.css'
 const validate = values => {
     const errors = {}
     if (!values.email) {

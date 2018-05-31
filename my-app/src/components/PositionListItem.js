@@ -1,12 +1,13 @@
 import React from "react";
 function PositionListItem({position, jobIndex, onClick}) {
+    debugger;
     return(
         <div className="panel panel-success">
-            <div className="panel-heading" onClick={() => (onClick(jobIndex))}>
+            <div className="panel-heading" onClick={(e) => (onClick(e,jobIndex, 'general'))}>
                 <div className="row">
                     <div className="col-xs-12">
-                      {/*  <div><button className="btn-primary pull-right update" onClick={(e) => (onClick(e,jobIndex,'update'))}>update</button></div>
-                        <div><button className="btn-primary pull-right delete">delete</button></div>*/}
+                       <div><button className="btn-primary pull-right update" onClick={(e) => (onClick(e,jobIndex,'update'))}>Update</button></div>
+                        <div><button className="btn-primary pull-right delete">Delete</button></div>
                         <h3 className="project-name">test title in position list item js</h3>
                         <h3 className="panel-title">{position.project}</h3>
                     </div>

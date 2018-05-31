@@ -2,7 +2,9 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+/*
 import { SubmissionError } from 'redux-form'
+*/
 import axios from 'axios';
 const SiteOptions = [
     {value: 'Offshore', label: 'Offshore' },{value: 'Onshore', label: 'Onshore' }

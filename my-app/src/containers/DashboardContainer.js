@@ -1,11 +1,12 @@
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux';
-import getAllOpenPositions from '../Actions/PositionListActions'
+import getAllOpenPositions from '../Actions/PositionListActions';
+import getAllUserDetails from '../Actions/UserListActions';
 import DashboardComponent from "../components/DashboardComponent";
 
 const mapStateToProps = (state) => {
     return {
-        positions:  state
+        listOfPositions:  state,
+        userInfo : state
     }
 }
 
@@ -14,7 +15,10 @@ const mapDispatchToProps = dispatch => {
    return {
         dispatchAllOpenPositions:(data)=>{
             dispatch(getAllOpenPositions(data));
-        }
+        },
+       dispatchUserDetails:(data)=>{
+           dispatch(getAllUserDetails(data));
+       }
     }
 }
 

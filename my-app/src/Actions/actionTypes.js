@@ -1,3 +1,3 @@
 export const DISPLAY_POSITIONS = 'DISPLAY_POSITIONS';
-
+export const DISPLAY_USERS = 'DISPLAY_USERS';
 
