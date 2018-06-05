@@ -9,65 +9,57 @@
   "positions" : [
     {
       "project": "Open Bank",
-      "projectId": 10,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus. Sed scelerisque ligula non.",
       "location": "Columbia",
       "jobId": 100,
       "openPosition": {
         "title": "Web UI Developer",
         "numberOfPositions": 2,
-        "isOnshore": false,
+        "OnshoreOffshore": "Offshore",
         "seniorityLevel": "Semi Senior Advanced",
         "skills": ["ReactJS", "Redux", "CSS3", "HTML5", "Advanced JS"],
-        "jobId": 100,
-        "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
+       "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     },
     {
       "project": "Open Bank",
-      "projectId": 17,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus. Sed scelerisque ligula non.",
       "location": "Columbia",
-      "jobId": 100,
+      "jobId": 101,
       "openPosition": {
         "title": "Java Developer",
         "numberOfPositions": 2,
-        "isOnshore": false,
+        "OnshoreOffshore": "Offshore",
         "seniorityLevel": "Semi Senior Advanced",
         "skills": ["Java", "Spring", "Web Services", "Hibernate"],
-        "jobId": 100,
-        "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
+       "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     },
     {
       "project": "Disney",
-      "projectId": 11,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus. Sed scelerisque ligula non.",
       "location": "New York",
-      "jobId": 100,
+      "jobId": 102,
       "openPosition": {
         "title": "AWS Developer",
         "numberOfPositions": 1,
-        "isOnshore": true,
+        "OnshoreOffshore": "Offshore",
         "seniorityLevel": "Senior",
         "skills": ["AWS", "Java", "MongoDB"],
-        "jobId": 103,
-        "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
+       "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     },
     {
       "project": "Osram",
-      "projectId": 12,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus. Sed scelerisque ligula non.",
       "location": "Mexico",
-      "jobId": 100,
+      "jobId": 103,
       "openPosition": {
         "title": "Embedded Engineer",
         "numberOfPositions": 4,
-        "isOnshore": true,
+        "OnshoreOffshore": "Onshore",
         "seniorityLevel": "Senior Advanced",
         "skills": ["AWS", "Java", "MongoDB"],
-        "jobId": 103,
         "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     }

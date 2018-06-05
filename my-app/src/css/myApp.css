@@ -130,7 +130,7 @@ button:hover {
 }
 
 .LoginWrapper .form-group label{
-    color:white;
+    /*color:white;*/
     margin-left: 12px;
 }
 
@@ -139,7 +139,7 @@ button:hover {
 }
 .LoginWrapper h1{
     margin-bottom: 40px;
-    color:white;
+    /*color:white;*/
     text-align: center;
 }
 .LoginWrapper h1 b{

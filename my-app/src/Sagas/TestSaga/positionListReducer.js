@@ -1,5 +1,5 @@
 
-import {DISPLAY_POSITIONS} from "../Actions/actionTypes";
+import {DISPLAY_POSITIONS} from "../../Actions/actionTypes";
 
 const  positionListReducer  = (state = [], action) => {
     switch(action.type) {

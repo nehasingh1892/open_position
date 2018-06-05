@@ -8,27 +8,30 @@ import registerServiceWorker from './registerServiceWorker';
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
-import reducer from './Reducers/index';
+import reducers from './Reducers/index';
 import getOpenPositions from './components/DashboardComponent'
+import createSagaMiddleware from 'redux-saga';
+import mySaga from './Sagas/TestSaga/saga';
+
+
+
+// create the saga middleware
+const sagaMiddleware = createSagaMiddleware();
+
 /*import createSagaMiddleware from 'redux-saga'
 
-import sagas from './sagas'*/
 
 
 /*
 const sagaMiddleware = createSagaMiddleware()
 */
 
-
 const store = createStore(
-    reducer
-    /*,
-    (applyMiddleware(sagaMiddleware))*/
+    reducers,
+    (applyMiddleware(sagaMiddleware))
 );
+sagaMiddleware.run(mySaga);
 
-/*
-sagaMiddleware.run(sagas)
-*/
 
 //store.dispatch(getOpenPositions);
 
