@@ -4,7 +4,7 @@
     "seniorityLevel": "Junior Advanced",
     "currentPosition": "Test Engineer",
     "role": "admin",
-    "Skills": ["ReactJS", "Redux", "CSS3", "HTML5", "Advanced JS"]
+    "Skills": "ReactJS, Redux, CSS3, HTML5 ,Advanced JS"
   },
   "positions" : [
     {
@@ -17,7 +17,7 @@
         "numberOfPositions": 2,
         "OnshoreOffshore": "Offshore",
         "seniorityLevel": "Semi Senior Advanced",
-        "skills": ["ReactJS", "Redux", "CSS3", "HTML5", "Advanced JS"],
+        "skills": "ReactJS, Redux, CSS3, HTML5 ,Advanced JS",
        "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     },
@@ -31,7 +31,7 @@
         "numberOfPositions": 2,
         "OnshoreOffshore": "Offshore",
         "seniorityLevel": "Semi Senior Advanced",
-        "skills": ["Java", "Spring", "Web Services", "Hibernate"],
+        "skills": "AWS, Java, MongoDB",
        "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     },
@@ -45,7 +45,7 @@
         "numberOfPositions": 1,
         "OnshoreOffshore": "Offshore",
         "seniorityLevel": "Senior",
-        "skills": ["AWS", "Java", "MongoDB"],
+        "skills": "AWS, Java, MongoDB",
        "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     },
@@ -59,7 +59,7 @@
         "numberOfPositions": 4,
         "OnshoreOffshore": "Onshore",
         "seniorityLevel": "Senior Advanced",
-        "skills": ["AWS", "Java", "MongoDB"],
+        "skills": "AWS, Java, MongoDB",
         "positionDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus."
       }
     }

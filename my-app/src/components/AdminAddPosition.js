@@ -4,6 +4,7 @@ import '../data.json';
 import { Field, reduxForm } from 'redux-form';
 import { bake_cookie, read_cookie } from 'sfcookies';
 import Dropdown from 'react-dropdown';
+import Header from './Header'
 
 
 class AddPositionForm extends React.Component{
@@ -40,19 +41,102 @@ class AddPositionForm extends React.Component{
 
     handleFieldChange = (event) => {
         debugger;
-        const positions= read_cookie('DataFromJson');
-        const jobindex = !isNaN(jobindex) ? parseInt(this.props.history.location.pathname[9]) : '';
+        const jobindex = parseInt(this.props.history.location.pathname[9]);
         const name = event.target.name;
-        positions.positions[jobindex][name] = event.target.value;
-        bake_cookie('DataFromJson', positions);
-        this.setState({formData:positions.positions[jobindex]});
+        if(isNaN(jobindex)){
+            let positions=this.state.formData;
+            positions[name]=event.target.value;
+            this.setState({formData:positions});
+        }else{
+            const positions= read_cookie('DataFromJson');
+            positions.positions[jobindex][name] = event.target.value;
+            this.setState({formData:positions.positions[jobindex]});
+        }
+
         //this.forceUpdate();
         //console.log(localStorage.getItem(positions))
     }
 
+    renderFieldForText({input,
+                   label,
+                   type,
+                   id,
+                   defaultValue,
+                   min,
+                   placeholder,
+                   className,rows,
+                   meta: { touched, error, warning }}) {
+        return (
+            <div>
+                <label>{label}</label>
+                <div>
+                    <input {...input} label={label} type={type} id={id} min={min} value={defaultValue} />
+                    {touched &&
+                    ((error && <span><br/>{error}</span>) ||
+                        (warning && <span>{warning}</span>))}
+                </div>
+            </div>
+        )
+    }
+
+    renderFieldForTextarea ({
+                                input,
+                                label,
+                                id,
+                                min,
+                                className,rows,
+                                defaultValue,
+                                Change,
+                                meta: { touched, error, warning }
+                            }) {
 
 
-    handleSubmit =(event)=>{
+        return(
+            <div>
+                <label>{label}</label>
+                <div>
+            <textarea {...input} className={className} rows={rows} value={defaultValue} id={id} onChange={Change}>{touched &&
+            ((error && <span><br/>{error}</span>) ||
+                (warning && <span>{warning}</span>))}</textarea>
+                </div>
+            </div>
+        );
+
+    }
+
+    renderFieldForDropdown ({
+                                  input,
+                                  label,
+                                  id,
+                                  options,
+                                  placeholder,
+                                  onChange,
+                                  defaultValue,
+                                  meta: { touched, error, warning }
+                              }) {
+        return(
+            <div>
+
+                <label>{label}</label>
+                <Dropdown {...input} options={options} onChange={onChange} value={defaultValue} placeholder={placeholder} />
+
+            </div>
+        )
+    }
+
+
+
+
+handleSubmit =(event)=>{
+        let positions = read_cookie('DataFromJson');
+        const data=this.state.formData;
+        const jobindex = parseInt(this.props.history.location.pathname[9]);
+        if(isNaN(jobindex)){
+            positions.positions.push(this.state.formData);
+        }else{
+            positions.positions[jobindex] = this.state.formData;
+        }
+        bake_cookie('DataFromJson', positions);
         this.props.history.push('/Dashboard');
     }
 
@@ -69,45 +153,7 @@ class AddPositionForm extends React.Component{
     render(){
 
         const {  pristine, reset, submitting } = this.props;
-        const renderFieldForDropdown = ({
-                                            input,
-                                            label,
-                                            id,
-                                            options,
-                                            placeholder,
-                                            onChange,
-                                            defaultValue,
-                                            meta: { touched, error, warning }
-                                        }) => (
-            <div>
 
-                <label>{label}</label>
-                <Dropdown {...input} options={options} onChange={onChange} value={defaultValue} placeholder={placeholder} />
-
-            </div>
-        );
-
-        const renderFieldForText = ({
-                                        input,
-                                        label,
-                                        type,
-                                        id,
-                                        defaultValue,
-                                        min,
-                                        placeholder,
-                                        className,rows,
-                                        meta: { touched, error, warning }
-                                    }) => (
-            <div>
-                <label>{label}</label>
-                <div>
-                    <input {...input} label={label} type={type} id={id} min={min} value={defaultValue} />
-                    {touched &&
-                    ((error && <span><br/>{error}</span>) ||
-                        (warning && <span>{warning}</span>))}
-                </div>
-            </div>
-        );
 
         const warn = values => {
             const warnings = {}
@@ -161,62 +207,55 @@ class AddPositionForm extends React.Component{
             { value: 'Junior', label: 'Junior', className: 'myOptionClassName' }
         ]
 
-        const renderFieldForTextarea = ({
-                                            input,
-                                            label,
-                                            id,
-                                            min,
-                                            className,rows,
-                                            defaultValue,
-                                            meta: { touched, error, warning }
-                                        }) => (
-            <div>
-                <label>{label}</label>
-                <div>
-            <textarea {...input} className={className} rows={rows} value={defaultValue} id={id}>{touched &&
-            ((error && <span><br/>{error}</span>) ||
-                (warning && <span>{warning}</span>))}</textarea>
-                </div>
-            </div>
-        );
+
         if(this.state.formData===""){
             return null;
         }
         return(
-            <div>
+            <div className="AddPositionform">
+                <Header />
                 <div className="LoginWrapper AddPosition">
                     {/*<h1>{jobindexFrom}</h1>
                     <h1>{positions.positions[jobindex].project}</h1>*/}
-                    <h1>{this.props.history.location.pathname === '/add' ? 'Add Open Position Details' : 'Update Position details'}</h1>
-                    <div className="form-group">
-                        <Field id="projname" onChange={this.handleFieldChange}  className="form-control"  type="text" component={renderFieldForText} label="Project Name" name="project" defaultValue={this.state.formData.project} />
+                    <div className="panel panel-success">
+                        <div className="panel-heading">
+                            <div className="row">
+                                <div className="col-xs-12">
+                                     <h1>{this.props.history.location.pathname === '/add' ? 'Add Open Position Details' : 'Update Position details'}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="panel-body">
+                                    <div className="form-group">
+                        <Field id="projname" onChange={this.handleFieldChange}  className="form-control"  type="text" component={this.renderFieldForText} label="Project Name" name="project" defaultValue={this.state.formData.project} />
                     </div>
                     <div className="form-group">
-                        <Field component={renderFieldForTextarea} onChange={this.handleFieldChange} id="projDesc" rows="4" className="form-control rounded-0"  label="Project Description" name="description" defaultValue={this.state.formData.description}/>
-                    </div>
-
-                    <div className="form-group">
-                        <Field placeholder="Select an option" component={renderFieldForDropdown}  id="Title" label="Title" options={TitleOptions} onChange={this._onSelect} name="openPosition.title" defaultValue={this.state.formData.openPosition.title} />
-                    </div>
-                    <div className="form-group">
-                        <Field options={SiteOptions} onChange={this._onSelect} defaultValue={this.state.formData.openPosition.OnshoreOffshore} placeholder="Select an option" component={renderFieldForDropdown}  id="Site" label="Onshore/Offshore"/>
-                    </div>
-                    <div className="form-group">
-
-                        <Field options={SeniorityOptions} id="seniority" onChange={this._onSelect} defaultValue={this.state.formData.openPosition.seniorityLevel} placeholder="Select an option" name="openPosition.seniorityLevel" component={renderFieldForDropdown} label="Seniority" />
+                        <Field Change={this.handleFieldChange} component={this.renderFieldForTextarea} id="projDesc" rows="4" className="form-control rounded-0"  label="Project Description" name="description" defaultValue={this.state.formData.description}/>
                     </div>
 
                     <div className="form-group">
-                        <Field options={LocationOptions} onChange={this._onSelect} defaultValue={this.state.formData.location} placeholder="Select an option" name="location" component={renderFieldForDropdown}  id="Location" label="Location"/>
+                        <Field placeholder="Select an option" component={this.renderFieldForDropdown}  id="Title" label="Title" options={TitleOptions} onChange={this.handleFieldChange} name="openPosition.title" defaultValue={this.state.formData.openPosition.title} />
                     </div>
                     <div className="form-group">
-                        <Field name="Skills Required" onChange={this.handleFieldChange} defaultValue={this.state.formData.openPosition.skills} component={renderFieldForTextarea} rows="4" className="form-control rounded-0" name="openPosition.skills" id="skills"  label="Skills Required" />
+                        <Field options={SiteOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.openPosition.OnshoreOffshore} placeholder="Select an option" component={this.renderFieldForDropdown}  id="Site" label="Onshore/Offshore"/>
                     </div>
                     <div className="form-group">
-                        <Field name="Job ID" id="JobId" onChange={this.handleFieldChange} defaultValue={this.state.formData.jobId} className="form-control" min="0" type="number" name="jobId" component={renderFieldForText} label="Job ID"/>
+
+                        <Field options={SeniorityOptions} id="seniority" onChange={this.handleFieldChange} defaultValue={this.state.formData.openPosition.seniorityLevel} placeholder="Select an option" name="openPosition.seniorityLevel" component={this.renderFieldForDropdown} label="Seniority" />
+                    </div>
+
+                    <div className="form-group">
+                        <Field options={LocationOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.location} placeholder="Select an option" name="location" component={this.renderFieldForDropdown}  id="Location" label="Location"/>
                     </div>
                     <div className="form-group">
-                        <Field id="projDesc" onChange={this.handleFieldChange} defaultValue={this.state.formData.openPosition.positionDescription} component={renderFieldForTextarea} name="openPosition.positionDescription" rows="4" className="form-control rounded-0"  label="Project Description" />
+                        <Field name="Skills Required" Change={this.handleFieldChange}  defaultValue={this.state.formData.openPosition.skills} component={this.renderFieldForTextarea} rows="4" className="form-control rounded-0" name="openPosition.skills" id="skills"  label="Skills Required" />
+                    </div>
+                    <div className="form-group">
+                        <Field name="Job ID" id="JobId"  defaultValue={this.state.formData.jobId} className="form-control" min="0" type="number" name="jobId" component={this.renderFieldForText} label="Job ID"/>
+                    </div>
+                    <div className="form-group">
+                        <Field Change={this.handleFieldChange} component={this.renderFieldForTextarea} id="positionDesc"  rows="4" className="form-control rounded-0" label="Project Description"  name="openPosition.positionDescription"  defaultValue={this.state.formData.openPosition.positionDescription} />
                     </div>
 
                     <div>
@@ -226,6 +265,7 @@ class AddPositionForm extends React.Component{
                         <button type="button" className="btn btn-default" disabled={pristine || submitting} onClick={reset}>
                             Clear
                         </button>
+                    </div>
                     </div>
                 </div>
             </div>

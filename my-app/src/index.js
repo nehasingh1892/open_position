@@ -6,7 +6,6 @@ import './css/myApp.css';
 import './css/bootstrap.min.css';
 import registerServiceWorker from './registerServiceWorker';
 import {createStore, applyMiddleware} from 'redux';
-import thunk from 'redux-thunk';
 import {Provider} from 'react-redux';
 import reducers from './Reducers/index';
 import getOpenPositions from './components/DashboardComponent'

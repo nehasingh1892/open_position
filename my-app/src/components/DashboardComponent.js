@@ -1,10 +1,11 @@
 import React from 'react';
 import PositionListItem from './PositionListItem';
 import '../data.json';
-import { bake_cookie, read_cookie } from 'sfcookies';
+import { bake_cookie, read_cookie, delete_cookie } from 'sfcookies';
 import getAllUserDetails1 from "../Sagas/TestSaga/testAction";
 import getAllOpenPositions from '../Actions/PositionListActions';
-
+import Header from './Header';
+import './testPOCimg.jpg';
 
 class DashboardComponent extends React.Component{
 
@@ -12,12 +13,13 @@ class DashboardComponent extends React.Component{
         super(props);
         this.addPositions = this.addPositions.bind(this);
         this.getPositionDetails = this.getPositionDetails.bind(this);
-        this.deleteThisTask = this.deleteThisTask.bind(this);
+        this.deletePosition = this.deletePosition.bind(this);
     }
 
     componentDidMount(){
         const that=this;
         const positions= read_cookie('DataFromJson');
+
         if(positions.length!=0){
             that.props.dispatchAllOpenPositions(positions.positions);
             that.props.dispatchUserDetails(positions.userDetails);
@@ -35,22 +37,16 @@ class DashboardComponent extends React.Component{
 
     }
 
+    getDataFromCookies = () => {
+        const positions= read_cookie('DataFromJson');
+        this.props.dispatchAllOpenPositions(positions.positions);
+        this.props.dispatchUserDetails(positions.userDetails);
+    }
+
     addPositions = () => {
         this.props.history.push('/add')
     }
 
-    deleteThisTask(itemtobedeleted) {
-
-        const newItem2 =
-            this.props.listOfPositions.positions.filter((item) => {
-                return item != itemtobedeleted
-            })
-
-        newItem2;
-        this.setState({
-            positions: newItem2,
-        })
-    }
 
     updateOpenPosition(e,jobIndex){
         e.stopPropagation();
@@ -64,27 +60,61 @@ class DashboardComponent extends React.Component{
         operationToBePerformed!='general' ? this.props.history.push('/project/'+jobIndex+'/'+operationToBePerformed) : this.props.history.push('/project/'+jobIndex+'/general');
     }
 
+
+   /* deletePosition(event, JobID){
+        event.stopPropagation();
+       let positionListData = read_cookie('DataFromJson');
+       let positionList = positionListData.positions;
+        for (let i = 0; i < positionList.length; i++) {
+            if (positionList[i].jobId == JobID) {
+                positionList.splice(i,1);
+            }
+        }
+        console.log("Positions after delete :: ", positionList);
+        bake_cookie('DataFromJson', positionList);
+        this.forceUpdate();
+
+
+    }*/
+
+    deletePosition(event, jobIndex) {
+        event.stopPropagation();
+        const positionListData = read_cookie('DataFromJson');
+        positionListData.positions.splice(jobIndex, 1);
+        bake_cookie('DataFromJson', positionListData);
+        this.getDataFromCookies();
+    }
+
+
     render(){
         const that= this;
         debugger;
         const displayPosition= that.props.listOfPositions.positions.map((item, index) => {
             return (
                 <div>
-                    <PositionListItem key={index} onClick={this.getPositionDetails} position={item} jobIndex={index} updatePosition={this.updateOpenPosition}/>
+                    <PositionListItem key={index} onClick={this.getPositionDetails} position={item} jobIndex={index} deleteThisTask={this.deletePosition} updatePosition={this.updateOpenPosition}/>
                     {/*<button type="button" className="btn-primary"  onClick={this.deleteThisTask.bind(this, item)}>Remove this position</button>*/}
                 </div>
             )
         });
         return(
             <div className="container">
-
+                <Header />
                 <div className="main-container">
                     <div className="left-container">
-                        <div>
-                            User Details :
-                            <div>Name: {this.props.userInfo.userDetails.name}</div>
-                            <div>Seniority: {this.props.userInfo.userDetails.seniorityLevel}</div>
-                            <div> Skills: {this.props.userInfo.userDetails.Skills}</div>
+                          <div className="card">
+                                {/*<img src="testPOCimg.jpg" alt="John"/>*/}
+
+                              <div className="glober-image">
+                                  <img alt="glober" className="img-circle"
+                                       src="https://plus.google.com/_/focus/photos/private/AIbEiAIAAABECOTKn9Cy-7ewgwEiC3ZjYXJkX3Bob3RvKihiOGI5NGYyYTg2M2Q0NDQwYTdiMGMzZGIxOWIwNDUwOTI0Zjg1YTE5MAHfAOIyFuHLR076Bc7cFpPqk4qKtw" />
+                              </div>
+                                    <h1>{this.props.userInfo.userDetails.name}</h1>
+                                    <p className="title">{this.props.userInfo.userDetails.currentPosition}</p>
+                              <p>Seniority Level : {this.props.userInfo.userDetails.seniorityLevel}</p>
+
+                              <p>Skills: {this.props.userInfo.userDetails.Skills} </p>
+
                         </div>
                     </div>
 

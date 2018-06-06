@@ -81,11 +81,11 @@
     width: 67%;
 }
 .panel.panel-success>.panel-heading {
-    cursor: pointer;
+    /*cursor: pointer;*/
     background-color: #d5eecb;
 }
 .panel-success>.panel-heading:hover {
-    box-shadow: 0 0px 4px 3px #9aa4a3;
+    /*box-shadow: 0 0px 4px 3px #9aa4a3;*/
 }
 
 .bordered-box, .bs-callout {
@@ -145,10 +145,107 @@ button:hover {
 .LoginWrapper h1 b{
     margin-top:20px;
 }
-.LoginWrapper form{
+.LoginWrapper .form{
     margin-top: 5%;
     margin-left: 15%;
     margin-right: 15%;
 }
 
 body .LoginWrapper{font-family: Arial, Helvetica, sans-serif;}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.card .title {
+    color: grey;
+    font-size: 18px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.card button:hover,.card a:hover {
+    opacity: 0.7;
+}
+
+.card img{
+    width:45%;
+    margin-top:20px;
+}
+
+.marginCard{
+    margin: 24px 0;
+}
+
+#my-skills-endorsement .glober-image {
+    margin-top: 50px;
+    text-align: center;
+}
+
+          #my-glober-info .glober-image {
+              margin: 0 auto;
+              width: 45%;
+          }
+
+#my-skills-endorsement .glober-image img {
+    width: 50%;
+    max-width: 250px;
+    border-radius: 50%;
+}
+          #my-glober-info .glober-image img {
+              width: 45%;
+              height: auto;
+          }
+
+#my-skills-endorsement .glober-image {
+    margin-top: 50px;
+    text-align: center;
+}
+.form input, .form textarea, .form dropdown{
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px #999;
+}
+
+.Dropdown-control {
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+.Dropdown-option{
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-top: 0px solid lightgray;
+    /*border-radius: 5px;*/
+}
+
+.Dropdown-control:before {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid lightgrey;
+}

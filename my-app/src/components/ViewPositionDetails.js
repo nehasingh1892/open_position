@@ -19,7 +19,7 @@ const ViewPositionDetails = (props) => {
                         <table className="table table-bordered">
                             <tbody>
                             <RequirementRow title="Location:" value={obj.location} />
-                            <RequirementRow title="Skills Required:" value={obj.openPosition.skills.join(", ")} />
+                            <RequirementRow title="Skills Required:" value={obj.openPosition.skills} />
                             <RequirementRow title="Seniority Level:" value={obj.openPosition.seniorityLevel} />
                             <RequirementRow title="Description:" value={obj.openPosition.positionDescription} />
                             </tbody>
