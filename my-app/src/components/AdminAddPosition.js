@@ -4,7 +4,7 @@ import '../data.json';
 import { Field, reduxForm } from 'redux-form';
 import { bake_cookie, read_cookie } from 'sfcookies';
 import Dropdown from 'react-dropdown';
-import Header from './Header'
+import Header from './Header';
 
 
 class AddPositionForm extends React.Component{
@@ -28,13 +28,13 @@ class AddPositionForm extends React.Component{
             jobId :!isNaN(jobindex) ? positions.positions[jobindex].jobId : '',
             location:!isNaN(jobindex) ? positions.positions[jobindex].location : '',
             description : !isNaN(jobindex) ? positions.positions[jobindex].description : '',
-            openPosition:{
-                OnshoreOffshore : !isNaN(jobindex) ? positions.positions[jobindex].openPosition.OnshoreOffshore:'',
-                title: !isNaN(jobindex) ? positions.positions[jobindex].openPosition.title :'',
-                seniorityLevel: !isNaN(jobindex) ? positions.positions[jobindex].openPosition.seniorityLevel :'',
-                positionDescription: !isNaN(jobindex) ? positions.positions[jobindex].openPosition.positionDescription:'',
-                skills: !isNaN(jobindex) ? positions.positions[jobindex].openPosition.skills:''
-            }
+
+            OnshoreOffshore : !isNaN(jobindex) ? positions.positions[jobindex].OnshoreOffshore:'',
+            title: !isNaN(jobindex) ? positions.positions[jobindex].title :'',
+            seniorityLevel: !isNaN(jobindex) ? positions.positions[jobindex].seniorityLevel :'',
+            positionDescription: !isNaN(jobindex) ? positions.positions[jobindex].positionDescription:'',
+            skills: !isNaN(jobindex) ? positions.positions[jobindex].skills:''
+
         }
         this.setState({formData:initialValues});
     }
@@ -58,14 +58,14 @@ class AddPositionForm extends React.Component{
     }
 
     renderFieldForText({input,
-                   label,
-                   type,
-                   id,
-                   defaultValue,
-                   min,
-                   placeholder,
-                   className,rows,
-                   meta: { touched, error, warning }}) {
+                           label,
+                           type,
+                           id,
+                           defaultValue,
+                           min,
+                           placeholder,
+                           className,rows,
+                           meta: { touched, error, warning }}) {
         return (
             <div>
                 <label>{label}</label>
@@ -105,15 +105,15 @@ class AddPositionForm extends React.Component{
     }
 
     renderFieldForDropdown ({
-                                  input,
-                                  label,
-                                  id,
-                                  options,
-                                  placeholder,
-                                  onChange,
-                                  defaultValue,
-                                  meta: { touched, error, warning }
-                              }) {
+                                input,
+                                label,
+                                id,
+                                options,
+                                placeholder,
+                                onChange,
+                                defaultValue,
+                                meta: { touched, error, warning }
+                            }) {
         return(
             <div>
 
@@ -127,7 +127,7 @@ class AddPositionForm extends React.Component{
 
 
 
-handleSubmit =(event)=>{
+    handleSubmit =(event)=>{
         let positions = read_cookie('DataFromJson');
         const data=this.state.formData;
         const jobindex = parseInt(this.props.history.location.pathname[9]);
@@ -218,54 +218,54 @@ handleSubmit =(event)=>{
                     {/*<h1>{jobindexFrom}</h1>
                     <h1>{positions.positions[jobindex].project}</h1>*/}
                     <div className="panel panel-success">
-                        <div className="panel-heading">
+                        <div>
                             <div className="row">
                                 <div className="col-xs-12">
-                                     <h1>{this.props.history.location.pathname === '/add' ? 'Add Open Position Details' : 'Update Position details'}</h1>
+                                    <h1>{this.props.history.location.pathname === '/add' ? 'Add Open Position Details' : 'Update Position details'}</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="panel-body">
-                                    <div className="form-group">
-                        <Field id="projname" onChange={this.handleFieldChange}  className="form-control"  type="text" component={this.renderFieldForText} label="Project Name" name="project" defaultValue={this.state.formData.project} />
-                    </div>
-                    <div className="form-group">
-                        <Field Change={this.handleFieldChange} component={this.renderFieldForTextarea} id="projDesc" rows="4" className="form-control rounded-0"  label="Project Description" name="description" defaultValue={this.state.formData.description}/>
-                    </div>
+                        <div className="form-group">
+                            <Field id="projname" onChange={this.handleFieldChange}  className="form-control"  type="text" component={this.renderFieldForText} label="Project Name" name="project" defaultValue={this.state.formData.project} />
+                        </div>
+                        <div className="form-group">
+                            <Field Change={this.handleFieldChange} component={this.renderFieldForTextarea} id="projDesc" rows="4" className="form-control rounded-0"  label="Project Description" name="description" defaultValue={this.state.formData.description}/>
+                        </div>
 
-                    <div className="form-group">
-                        <Field placeholder="Select an option" component={this.renderFieldForDropdown}  id="Title" label="Title" options={TitleOptions} onChange={this.handleFieldChange} name="openPosition.title" defaultValue={this.state.formData.openPosition.title} />
-                    </div>
-                    <div className="form-group">
-                        <Field options={SiteOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.openPosition.OnshoreOffshore} placeholder="Select an option" component={this.renderFieldForDropdown}  id="Site" label="Onshore/Offshore"/>
-                    </div>
-                    <div className="form-group">
+                        <div className="form-group">
+                            <Field placeholder="Select an option" component={this.renderFieldForDropdown}  id="Title" label="Title" options={TitleOptions} onChange={this.handleFieldChange} name="title" defaultValue={this.state.formData.title} />
+                        </div>
+                        <div className="form-group">
+                            <Field options={SiteOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.OnshoreOffshore} placeholder="Select an option" component={this.renderFieldForDropdown}  id="Site" label="Onshore/Offshore"/>
+                        </div>
+                        <div className="form-group">
 
-                        <Field options={SeniorityOptions} id="seniority" onChange={this.handleFieldChange} defaultValue={this.state.formData.openPosition.seniorityLevel} placeholder="Select an option" name="openPosition.seniorityLevel" component={this.renderFieldForDropdown} label="Seniority" />
-                    </div>
+                            <Field options={SeniorityOptions} id="seniority" onChange={this.handleFieldChange} defaultValue={this.state.formData.seniorityLevel} placeholder="Select an option" name="seniorityLevel" component={this.renderFieldForDropdown} label="Seniority" />
+                        </div>
 
-                    <div className="form-group">
-                        <Field options={LocationOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.location} placeholder="Select an option" name="location" component={this.renderFieldForDropdown}  id="Location" label="Location"/>
-                    </div>
-                    <div className="form-group">
-                        <Field name="Skills Required" Change={this.handleFieldChange}  defaultValue={this.state.formData.openPosition.skills} component={this.renderFieldForTextarea} rows="4" className="form-control rounded-0" name="openPosition.skills" id="skills"  label="Skills Required" />
-                    </div>
-                    <div className="form-group">
-                        <Field name="Job ID" id="JobId"  defaultValue={this.state.formData.jobId} className="form-control" min="0" type="number" name="jobId" component={this.renderFieldForText} label="Job ID"/>
-                    </div>
-                    <div className="form-group">
-                        <Field Change={this.handleFieldChange} component={this.renderFieldForTextarea} id="positionDesc"  rows="4" className="form-control rounded-0" label="Project Description"  name="openPosition.positionDescription"  defaultValue={this.state.formData.openPosition.positionDescription} />
-                    </div>
+                        <div className="form-group">
+                            <Field options={LocationOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.location} placeholder="Select an option" name="location" component={this.renderFieldForDropdown}  id="Location" label="Location"/>
+                        </div>
+                        <div className="form-group">
+                            <Field Change={this.handleFieldChange}  defaultValue={this.state.formData.skills} component={this.renderFieldForTextarea} rows="4" className="form-control rounded-0" name="skills" id="skills"  label="Skills Required" />
+                        </div>
+                        <div className="form-group">
+                            <Field  id="JobId" onChange={this.handleFieldChange}  defaultValue={this.state.formData.jobId} className="form-control" min="0" type="number" name="jobId" component={this.renderFieldForText} label="Job ID"/>
+                        </div>
+                        <div className="form-group">
+                            <Field Change={this.handleFieldChange} component={this.renderFieldForTextarea} id="positionDesc"  rows="4" className="form-control rounded-0" label="Project Description"  name="positionDescription"  defaultValue={this.state.formData.positionDescription} />
+                        </div>
 
-                    <div>
-                        <button type="submit" className="btn btn-default" disabled={submitting} onClick={this.handleSubmit}>
-                            Submit
-                        </button>
-                        <button type="button" className="btn btn-default" disabled={pristine || submitting} onClick={reset}>
-                            Clear
-                        </button>
-                    </div>
+                        <div>
+                            <button type="submit" className="btn btn-default" disabled={submitting} onClick={this.handleSubmit}>
+                                Submit
+                            </button>
+                            <button type="button" className="btn btn-default" disabled={pristine || submitting} onClick={reset}>
+                                Clear
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -275,8 +275,8 @@ handleSubmit =(event)=>{
 
 export default reduxForm({
     form: 'syncValidation', // a unique identifier for this form
-   // validate, // <--- validation function given to redux-form
-   // warn, // <--- warning function given to redux-form
+    // validate, // <--- validation function given to redux-form
+    // warn, // <--- warning function given to redux-form
 
 })(AddPositionForm)
 //export default AddPositionForm;

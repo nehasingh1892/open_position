@@ -11,9 +11,12 @@ class DashboardComponent extends React.Component{
 
     constructor(props){
         super(props);
+
         this.addPositions = this.addPositions.bind(this);
         this.getPositionDetails = this.getPositionDetails.bind(this);
         this.deletePosition = this.deletePosition.bind(this);
+        this.AppliedSuccess = this.AppliedSuccess.bind(this);
+        this.state=  { showResults: false };
     }
 
     componentDidMount(){
@@ -25,7 +28,7 @@ class DashboardComponent extends React.Component{
             that.props.dispatchUserDetails(positions.userDetails);
             return null;
         }
-        fetch("http://demo4532585.mockable.io/openposition_get")
+        fetch("https://demo0893423.mockable.io/openposition_get")
             .then(res => res.json())
             .then(json => {
                 that.props.dispatchAllOpenPositions(json.positions);
@@ -46,6 +49,16 @@ class DashboardComponent extends React.Component{
     addPositions = () => {
         this.props.history.push('/add')
     }
+
+
+    AppliedSuccess= () => {
+        this.setState({ showResults: true });
+            const that = this;
+           /* setTimeout(function() {
+                        that.setState({ showResults: false })
+
+                    }, 5000);*/
+      }
 
 
     updateOpenPosition(e,jobIndex){
@@ -89,11 +102,14 @@ class DashboardComponent extends React.Component{
     render(){
         const that= this;
         debugger;
+        const userFlag =  that.props.userInfo.userDetails;
         const displayPosition= that.props.listOfPositions.positions.map((item, index) => {
             return (
                 <div>
                     <PositionListItem key={index} onClick={this.getPositionDetails} position={item} jobIndex={index} deleteThisTask={this.deletePosition} updatePosition={this.updateOpenPosition}/>
-                    {/*<button type="button" className="btn-primary"  onClick={this.deleteThisTask.bind(this, item)}>Remove this position</button>*/}
+                    <div>{(this.props.userInfo.userDetails.role) === "user" ?  <button type="button" className="btn btn-primary" id="apply" onClick={this.AppliedSuccess}>
+                        Apply for this position
+                    </button> : ""}</div>
                 </div>
             )
         });
@@ -107,7 +123,7 @@ class DashboardComponent extends React.Component{
 
                               <div className="glober-image">
                                   <img alt="glober" className="img-circle"
-                                       src="https://plus.google.com/_/focus/photos/private/AIbEiAIAAABECOTKn9Cy-7ewgwEiC3ZjYXJkX3Bob3RvKihiOGI5NGYyYTg2M2Q0NDQwYTdiMGMzZGIxOWIwNDUwOTI0Zjg1YTE5MAHfAOIyFuHLR076Bc7cFpPqk4qKtw" />
+                                       src="https://ssl.gstatic.com/s2/profiles/images/silhouette200.png" />
                               </div>
                                     <h1>{this.props.userInfo.userDetails.name}</h1>
                                     <p className="title">{this.props.userInfo.userDetails.currentPosition}</p>
@@ -123,6 +139,21 @@ class DashboardComponent extends React.Component{
                             <div>{(this.props.userInfo.userDetails.role) === "admin" ?  <button onClick={this.addPositions} type="button" className="btn btn-primary addposition">
                                 Add position
                             </button> : ""}</div>
+                            <div className="alert alert-success" className="Applied">
+                                <strong id="Applied">Applied Successfully!</strong>
+                            </div>
+                            <div>{this.state.showResults ?  <div type="button" className="alert alert-success">
+                                Applied Successfully!!
+                            </div> : ""}</div>
+
+                            {/* <div className="panel-footer">
+                                <div className="row">
+                                    <div className="col-xs-12">
+                                        Applied Successfully!!
+                                    </div>
+                                    <div className="clearfix"></div>
+                                </div>
+                            </div>*/}
                             {displayPosition}
                         </div>
                     </div>

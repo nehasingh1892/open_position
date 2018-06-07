@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827c38f7-106d-4ebe-ae00-e34f056347fd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/DashboardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/DashboardComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/css/myApp.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/css/myApp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="DashboardComponent.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/DashboardComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="100" column="39" lean-forward="true" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+            <state relative-caret-position="109">
+              <caret line="94" column="61" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="61" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -36,50 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lib.es5.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="256" column="14" selection-start-line="256" selection-start-column="14" selection-end-line="256" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewPositionDetails.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="21" column="99" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Header.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/Header.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminAddPosition.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AdminAddPosition.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="251" column="138" selection-start-line="251" selection-start-column="138" selection-end-line="251" selection-end-column="138" />
+            <state relative-caret-position="1105">
+              <caret line="65" column="39" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="39" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -87,38 +48,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/node_modules/react-dropdown/index.d.ts">
+      <file leaf-file-name="saga.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+            <state relative-caret-position="119">
+              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#70#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/data.json">
+      <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/components/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="62" column="28" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="28" />
+            <state relative-caret-position="136">
+              <caret line="61" column="87" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PositionListItem.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PositionListItem.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/PositionListItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="70" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myApp.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/css/myApp.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="91" column="18" lean-forward="true" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+            <state relative-caret-position="187">
+              <caret line="12" column="140" selection-start-line="12" selection-start-column="140" selection-end-line="12" selection-end-column="140" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,20 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ProjectName</find>
-      <find>read_cookie</find>
-      <find>project</find>
-      <find>name=&quot;</find>
-      <find>key</find>
-      <find>handleFieldChange</find>
-      <find>initialValues</find>
-      <find>push</find>
-      <find>add</find>
-      <find>render</find>
-      <find>defaultValue</find>
-      <find>renderFieldForText</find>
-      <find>description</find>
-      <find>renderFieldForDropdown</find>
       <find>handleInputChangeAdd</find>
       <find>bake</find>
       <find>handleFieldChangeAdd</find>
@@ -157,13 +104,27 @@
       <find>position</find>
       <find>myApp.css</find>
       <find>forceud</find>
-      <find>user</find>
       <find>[&quot;ReactJS&quot;, &quot;Redux&quot;, &quot;CSS3&quot;, &quot;HTML5&quot;, &quot;Advanced JS&quot;]</find>
       <find>form</find>
-      <find>panel-heading</find>
       <find>renderFieldForTextarea</find>
       <find>projDesc</find>
+      <find>.openPosition.</find>
+      <find>panel-heading</find>
+      <find>.panel</find>
+      <find>numberOfPositions</find>
+      <find>openPosition</find>
+      <find>Apply``</find>
       <find>getDataFromCookies</find>
+      <find>add</find>
+      <find>valida</find>
+      <find>displayPosition</find>
+      <find>warn</find>
+      <find>type=&quot;text&quot;</find>
+      <find>validate</find>
+      <find>password</find>
+      <find>name</find>
+      <find>user</find>
+      <find>required</find>
     </findStrings>
     <replaceStrings>
       <replace>getAllOpenPositions</replace>
@@ -172,6 +133,7 @@
       <replace>name</replace>
       <replace>this.state.formData</replace>
       <replace>&quot;ReactJS, Redux, CSS3, HTML5 ,Advanced JS&quot;</replace>
+      <replace>.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -205,22 +167,22 @@
         <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/userListReducer.js" />
         <option value="$PROJECT_DIR$/my-app/src/Actions/UserListActions.js" />
         <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/testAction.js" />
-        <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js" />
         <option value="$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js" />
         <option value="$PROJECT_DIR$/my-app/src/App.js" />
         <option value="$PROJECT_DIR$/my-app/src/containers/AddPositionContainer.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/backup.js" />
         <option value="$PROJECT_DIR$/my-app/src/index.js" />
-        <option value="$PROJECT_DIR$/my-app/src/components/Login.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/Header.js" />
         <option value="$PROJECT_DIR$/my-app/public/index.html" />
-        <option value="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" />
-        <option value="$PROJECT_DIR$/my-app/src/data.json" />
         <option value="$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js" />
-        <option value="$PROJECT_DIR$/my-app/src/components/DashboardComponent.js" />
         <option value="$PROJECT_DIR$/my-app/src/css/myApp.css" />
+        <option value="$PROJECT_DIR$/my-app/src/data.json" />
+        <option value="$PROJECT_DIR$/my-app/src/components/Login.js" />
+        <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/DashboardComponent.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" />
       </list>
     </option>
   </component>
@@ -282,6 +244,13 @@
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="open_position" type="b2602c69:ProjectViewProjectNode" />
+              <item name="open_position" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="open_position" type="b2602c69:ProjectViewProjectNode" />
@@ -356,7 +325,7 @@
       <workItem from="1527584159322" duration="4419000" />
       <workItem from="1527588646463" duration="3812000" />
       <workItem from="1527796431829" duration="89744000" />
-      <workItem from="1528225639769" duration="27607000" />
+      <workItem from="1528225639769" duration="42611000" />
     </task>
     <task id="LOCAL-00001" summary="updated code with add position form and position/userdetails listing">
       <created>1527770501763</created>
@@ -372,26 +341,33 @@
       <option name="project" value="LOCAL" />
       <updated>1528179621928</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Committed code for add update positions">
+      <created>1528307681358</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528307681358</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172253000" />
+    <option name="totallyTimeSpent" value="187257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.035714287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11755952" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.46039605" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.072607264" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.072607264" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.09570957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.06930693" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.10231023" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -432,21 +408,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated code with add position form and position/userdetails listing" />
     <MESSAGE value="Committed code for update position" />
-    <option name="LAST_COMMIT_MESSAGE" value="Committed code for update position" />
+    <MESSAGE value="Committed code for add update positions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Committed code for add update positions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my-app/src/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -531,13 +501,6 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/sagas/testSaga/actions.js" />
     <entry file="file://$PROJECT_DIR$/my-app/src/sagas/testSaga/reducer.js" />
     <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js" />
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/positionRequirements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -580,16 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="75" lean-forward="true" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -610,16 +563,6 @@
           <caret line="17" column="78" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -685,16 +628,6 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -726,23 +659,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/PositionListItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="70" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="99" selection-start-line="21" selection-start-column="99" selection-end-line="21" selection-end-column="99" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -757,34 +673,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/css/myApp.css">
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/positionRequirements.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="91" column="18" lean-forward="true" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
+        <state relative-caret-position="102">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/data.json">
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/DashboardComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="100" column="39" lean-forward="true" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+        <state relative-caret-position="476">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/public/manifest.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/css/myApp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="261" column="8" selection-start-line="261" selection-start-column="8" selection-end-line="261" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="61" column="87" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="251" column="138" selection-start-line="251" selection-start-column="138" selection-end-line="251" selection-end-column="138" />
+        <state relative-caret-position="1105">
+          <caret line="65" column="39" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/DashboardComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="94" column="61" lean-forward="true" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/PositionListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="140" selection-start-line="12" selection-start-column="140" selection-end-line="12" selection-end-column="140" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

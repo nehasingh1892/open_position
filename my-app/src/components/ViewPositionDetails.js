@@ -12,19 +12,22 @@ const ViewPositionDetails = (props) => {
             {(props.positions.length > 0) ?
                 <div>
                     <div className="bs-callout">
-                        <p>{obj.openPosition.title}</p>
+                        <p>{obj.title}</p>
                         <p>{obj.project}</p>
                     </div>
                     <div className="bs-callout">
                         <table className="table table-bordered">
                             <tbody>
                             <RequirementRow title="Location:" value={obj.location} />
-                            <RequirementRow title="Skills Required:" value={obj.openPosition.skills} />
-                            <RequirementRow title="Seniority Level:" value={obj.openPosition.seniorityLevel} />
-                            <RequirementRow title="Description:" value={obj.openPosition.positionDescription} />
+                            <RequirementRow title="Work Location :" value={obj.OnshoreOffshore} />
+                            <RequirementRow title="Skills Required:" value={obj.skills} />
+                            <RequirementRow title="Seniority Level:" value={obj.seniorityLevel} />
+                            <RequirementRow title="Description:" value={obj.positionDescription} />
                             </tbody>
                         </table>
                     </div>
+
+
                 </div>
                 : null
             }
