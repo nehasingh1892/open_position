@@ -28,7 +28,7 @@ class DashboardComponent extends React.Component{
             that.props.dispatchUserDetails(positions.userDetails);
             return null;
         }
-        fetch("https://demo0893423.mockable.io/openposition_get")
+        fetch("https://demo6250001.mockable.io/admin")
             .then(res => res.json())
             .then(json => {
                 that.props.dispatchAllOpenPositions(json.positions);
@@ -106,7 +106,7 @@ class DashboardComponent extends React.Component{
         const displayPosition= that.props.listOfPositions.positions.map((item, index) => {
             return (
                 <div>
-                    <PositionListItem key={index} onClick={this.getPositionDetails} position={item} jobIndex={index} deleteThisTask={this.deletePosition} updatePosition={this.updateOpenPosition}/>
+                    <PositionListItem key={index} onClick={this.getPositionDetails} position={item} jobIndex={index} deleteThisTask={this.deletePosition} updatePosition={this.updateOpenPosition} role={this.props.userInfo.userDetails.role}/>
                     <div>{(this.props.userInfo.userDetails.role) === "user" ?  <button type="button" className="btn btn-primary" id="apply" onClick={this.AppliedSuccess}>
                         Apply for this position
                     </button> : ""}</div>

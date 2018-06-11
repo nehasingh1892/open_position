@@ -15,7 +15,13 @@ class AddPositionForm extends React.Component{
         this.handleFieldChange = this.handleFieldChange.bind(this);
         this.validate = this.validate.bind(this);
         this.state = {
-            formData:''
+            formData:'',
+            Selectedvalue:{
+                seniorityLevel:'',
+                title:'',
+                OnshoreOffshore:'',
+                seniorityLevel:''
+            }
         }
     }
 
@@ -36,7 +42,7 @@ class AddPositionForm extends React.Component{
             skills: !isNaN(jobindex) ? positions.positions[jobindex].skills:''
 
         }
-        this.setState({formData:initialValues});
+        this.setState({formData:initialValues,Selectedvalue:initialValues});
     }
 
     handleFieldChange = (event) => {
@@ -51,6 +57,11 @@ class AddPositionForm extends React.Component{
             const positions= read_cookie('DataFromJson');
             positions.positions[jobindex][name] = event.target.value;
             this.setState({formData:positions.positions[jobindex]});
+        }
+
+        if(name==="location" || name==="title" || name==="OnshoreOffshore" || name==="seniorityLevel"){
+            const Selectedvalue=this.state.Selectedvalue[name];
+            this.setState({Selectedvalue: event.target.value})
         }
 
         //this.forceUpdate();
@@ -142,12 +153,7 @@ class AddPositionForm extends React.Component{
 
     validate = values => {
         const errors = {}
-        if (!values.password) {
-            errors.password = 'Required'
-        } else if (!/(?=.*[0-9])/i.test(values.password)) {
-            errors.password = 'Password must contain at least 1 numeric character'
-        }
-        return errors
+
     }
 
     render(){
@@ -235,18 +241,18 @@ class AddPositionForm extends React.Component{
                         </div>
 
                         <div className="form-group">
-                            <Field placeholder="Select an option" component={this.renderFieldForDropdown}  id="Title" label="Title" options={TitleOptions} onChange={this.handleFieldChange} name="title" defaultValue={this.state.formData.title} />
+                            <Field placeholder="Select an option" component={this.renderFieldForDropdown}  id="Title" label="Title" options={TitleOptions} onChange={this.handleFieldChange} name="title" defaultValue={this.state.Selectedvalue.title} />
                         </div>
                         <div className="form-group">
-                            <Field options={SiteOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.OnshoreOffshore} placeholder="Select an option" component={this.renderFieldForDropdown}  id="Site" label="Onshore/Offshore"/>
+                            <Field options={SiteOptions} onChange={this.handleFieldChange} defaultValue={this.state.Selectedvalue.OnshoreOffshore} placeholder="Select an option" component={this.renderFieldForDropdown}  id="Site" label="Onshore/Offshore"/>
                         </div>
                         <div className="form-group">
 
-                            <Field options={SeniorityOptions} id="seniority" onChange={this.handleFieldChange} defaultValue={this.state.formData.seniorityLevel} placeholder="Select an option" name="seniorityLevel" component={this.renderFieldForDropdown} label="Seniority" />
+                            <Field options={SeniorityOptions} id="seniority" onChange={this.handleFieldChange} defaultValue={this.state.Selectedvalue.seniorityLevel} placeholder="Select an option" name="seniorityLevel" component={this.renderFieldForDropdown} label="Seniority" />
                         </div>
 
                         <div className="form-group">
-                            <Field options={LocationOptions} onChange={this.handleFieldChange} defaultValue={this.state.formData.location} placeholder="Select an option" name="location" component={this.renderFieldForDropdown}  id="Location" label="Location"/>
+                            <Field options={LocationOptions} onChange={this.handleFieldChange} defaultValue={this.state.Selectedvalue.location} placeholder="Select an option" name="location" component={this.renderFieldForDropdown}  id="Location" label="Location"/>
                         </div>
                         <div className="form-group">
                             <Field Change={this.handleFieldChange}  defaultValue={this.state.formData.skills} component={this.renderFieldForTextarea} rows="4" className="form-control rounded-0" name="skills" id="skills"  label="Skills Required" />
