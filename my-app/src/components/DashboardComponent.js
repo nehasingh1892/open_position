@@ -1,11 +1,13 @@
 import React from 'react';
 import PositionListItem from './PositionListItem';
 import '../data.json';
+import  axios from 'axios';
 import { bake_cookie, read_cookie, delete_cookie } from 'sfcookies';
 import getAllUserDetails1 from "../Sagas/TestSaga/testAction";
 import getAllOpenPositions from '../Actions/PositionListActions';
 import Header from './Header';
 import './testPOCimg.jpg';
+import UserDetails from './UserDetails';
 
 class DashboardComponent extends React.Component{
 
@@ -21,29 +23,49 @@ class DashboardComponent extends React.Component{
 
     componentDidMount(){
         const that=this;
-        const positions= read_cookie('DataFromJson');
+        /*const positions= read_cookie('DataFromJson');
+        const users = read_cookie('userDataFromJson')
 
-        if(positions.length!=0){
+        if(positions.length!=0 && positions.length!=null){
             that.props.dispatchAllOpenPositions(positions.positions);
-            that.props.dispatchUserDetails(positions.userDetails);
+            that.props.dispatchUserDetails(users.userDetails);
             return null;
         }
-        fetch("https://demo6250001.mockable.io/admin")
-            .then(res => res.json())
+*/
+        const userDetails = sessionStorage.getItem("LoginUser");
+        const userDetailsJson = JSON.parse(userDetails);
+
+                //localStorage.setItem('DataFromJson',JSON.stringify(json));
+
+        axios.post(' http://10.221.6.36:3000/users/login', {
+
+            userid: userDetailsJson[0].userid,
+           })
+            .then(function (response) {
+                console.log(response);
+               /* that.props.dispatchUserDetails(userDetailsJson);
+
+                bake_cookie('UserDataFromJson', userDetailsJson);*/
+            })
+            .catch(function (error) {
+
+            });
+        fetch("http://10.221.6.36:3000/users/allpositions")
+            .then(response => response.json())
             .then(json => {
-                that.props.dispatchAllOpenPositions(json.positions);
-                that.props.dispatchUserDetails(json.userDetails);
+                that.props.dispatchAllOpenPositions(json);
                 bake_cookie('DataFromJson', json);
                 //localStorage.setItem('DataFromJson',JSON.stringify(json));
             })
             .catch(error => {console.log(error);});
-
     }
 
     getDataFromCookies = () => {
         const positions= read_cookie('DataFromJson');
         this.props.dispatchAllOpenPositions(positions.positions);
-        this.props.dispatchUserDetails(positions.userDetails);
+        // const users = read_cookie('DataFromJson')
+        const users = read_cookie('UserDataFromJson');
+        this.props.dispatchUserDetails(users.userDetails);
     }
 
     addPositions = () => {
@@ -54,11 +76,7 @@ class DashboardComponent extends React.Component{
     AppliedSuccess= () => {
         this.setState({ showResults: true });
             const that = this;
-           /* setTimeout(function() {
-                        that.setState({ showResults: false })
-
-                    }, 5000);*/
-      }
+    }
 
 
     updateOpenPosition(e,jobIndex){
@@ -73,23 +91,6 @@ class DashboardComponent extends React.Component{
         operationToBePerformed!='general' ? this.props.history.push('/project/'+jobIndex+'/'+operationToBePerformed) : this.props.history.push('/project/'+jobIndex+'/general');
     }
 
-
-   /* deletePosition(event, JobID){
-        event.stopPropagation();
-       let positionListData = read_cookie('DataFromJson');
-       let positionList = positionListData.positions;
-        for (let i = 0; i < positionList.length; i++) {
-            if (positionList[i].jobId == JobID) {
-                positionList.splice(i,1);
-            }
-        }
-        console.log("Positions after delete :: ", positionList);
-        bake_cookie('DataFromJson', positionList);
-        this.forceUpdate();
-
-
-    }*/
-
     deletePosition(event, jobIndex) {
         event.stopPropagation();
         const positionListData = read_cookie('DataFromJson');
@@ -102,7 +103,13 @@ class DashboardComponent extends React.Component{
     render(){
         const that= this;
         debugger;
-        const userFlag =  that.props.userInfo.userDetails;
+        const userFlag =  that.props.userInfo.userDetails.map((item, index) => {
+                return (
+                    <div>
+                        <UserDetails key={index} users={item} jobIndex={index}/>
+                    </div>
+                )
+            });
         const displayPosition= that.props.listOfPositions.positions.map((item, index) => {
             return (
                 <div>
@@ -125,11 +132,7 @@ class DashboardComponent extends React.Component{
                                   <img alt="glober" className="img-circle"
                                        src="https://ssl.gstatic.com/s2/profiles/images/silhouette200.png" />
                               </div>
-                                    <h1>{this.props.userInfo.userDetails.name}</h1>
-                                    <p className="title">{this.props.userInfo.userDetails.currentPosition}</p>
-                              <p>Seniority Level : {this.props.userInfo.userDetails.seniorityLevel}</p>
-
-                              <p>Skills: {this.props.userInfo.userDetails.Skills} </p>
+                              {userFlag}
 
                         </div>
                     </div>

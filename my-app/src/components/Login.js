@@ -1,55 +1,79 @@
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
-import submit from './submit'
-import RemoteSubmitButton from './RemoteSubmitButton'
+import React from 'react';
+var axios = require('axios');
+class App extends React.Component {
 
-const renderField = ({ input, label, type, meta: { touched, error, required } }) => (
-    <div className={'mar5Per'}>
-        <div className={'pull-left'}><label>{label}</label></div>
-        <div>
-            <input {...input} placeholder={label} type={type} required={required}/>
-            {touched && error && <span>{error}</span>}
-        </div>
-    </div>
-)
 
-const RemoteSubmitForm = props => {
-    const { error, handleSubmit } = props
-    return (
-        <div className="container">
-            <div className="row">
-                <div className="col-sm-6 col-md-4 col-md-offset-4">
-                    <h1 className="text-center login-title">Login Detail</h1>
-                    <div className="account-wall text-center">
-                        <img alt="glober" className="img-circle LoginImg"
-                             src="https://ssl.gstatic.com/s2/profiles/images/silhouette200.png" />
-                            <form onSubmit={handleSubmit} className="form-signin">
-                                <Field
-                                    name="username"
-                                    type="text"
-                                    component={renderField} required
-                                    label="Username"
-                                />
-                                <Field
-                                    name="password"
-                                    type="password"
-                                    component={renderField} required
-                                    label="Password"
-                                />
+    constructor(props){
+        super(props);
+        this.servicecall = this.servicecall.bind(this);
+        this.state =
+            {
+                username :"",
+                pass:""
+            }
+        this.getUser = this.getUser.bind(this);
+        this.getPass = this.getPass.bind(this);
+    }
+    getUser = function(e){
+        this.setState({username:e.target.value})
+    }
+    getPass = function(e){
+        this.setState({pass:e.target.value})
+    }
+    servicecall = function(){
 
+
+        axios.post(' http://10.221.6.36:3000/users/login', {
+
+            userid: this.state.username,
+            password:this.state.pass
+        })
+            .then(function (response) {
+                console.log(response);
+                window.location.assign('#/Dashboard');
+                sessionStorage.setItem( "LoginUser", JSON.stringify(response.data));
+            })
+            .catch(function (error) {
+
+            });
+
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-6 col-md-4 col-md-offset-4">
+                        <h1 className="text-center login-title">Login Detail</h1>
+                        <div className="account-wall">
+                            <img className="profile-img"
+                                 src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                                 alt="" />
+                            <form className="form-signin">
                                 <div>
-                                    <RemoteSubmitButton/>
+                                    <label>Username</label>
+                                    <div>
+                                        <input type= "text" onChange = {this.getUser}/>
+                                    </div>
                                 </div>
+                                <div>
+                                    <label>Password</label>
+                                    <div>
+                                        <input type= "password" onChange = {this.getPass}/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button onClick  = {this.servicecall}>Login</button>
+                                </div>
+
+
                             </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    )
+        );
+    }
 }
 
-export default reduxForm({
-    form: 'remoteSubmit', // a unique identifier for this form
-    onSubmit: submit // submit function must be passed to onSubmit
-})(RemoteSubmitForm)
-
+export default App;

@@ -1,0 +1,31 @@
+{
+    "userDetails" : [
+    {
+      "name": "John",
+      "userID" : "john@globant.com",
+      "password" : "globant",
+      "seniorityLevel": "Junior",
+      "currentPosition": "Test Engineer",
+      "role": "user",
+      "Skills": "ReactJS, Redux, CSS3, HTML5 ,Advanced JS"
+    },
+      {
+      "name": "ramesh",
+      "userID" : "george@globant.com",
+      "password" : "globant",
+      "seniorityLevel": "Senior",
+      "currentPosition": "Developer",
+      "role": "admin",
+      "Skills": "AWS, Java, MongoDB"
+    },
+      {
+        "name": "Sheldon",
+        "userID" : "michael@globant.com",
+        "password" : "globant",
+        "seniorityLevel": "Senior",
+        "currentPosition": "Delivery manager",
+        "role": "Manager",
+        "Skills": "Management, AWS"
+      },
+  ]
+}

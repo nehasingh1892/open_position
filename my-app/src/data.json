@@ -1,12 +1,5 @@
 {
-  "userDetails": {
-    "name": "John",
-    "seniorityLevel": "Junior Advanced",
-    "currentPosition": "Test Engineer",
-    "role": "admin",
-    "Skills": "ReactJS, Redux, CSS3, HTML5 ,Advanced JS"
-  },
-  "positions" : [
+   "positions" : [
     {
       "project": "Open Bank",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus eu nibh et eleifend. Integer id turpis in diam posuere ultricies sit amet id dolor. Donec faucibus venenatis est vel maximus. Sed scelerisque ligula non.",

@@ -1,6 +1,6 @@
 const initialState = {
     positions: [],
-    userDetails: {}
+    userDetails: []
 };
 
 export default initialState;
