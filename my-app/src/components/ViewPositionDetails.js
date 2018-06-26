@@ -5,10 +5,15 @@ import RequirementRow from "./positionRequirements";
 
 const ViewPositionDetails = (props) => {
     debugger;
+
+    const Back = ()=>{
+        window.location.replace('#/Dashboard');
+    }
+
     const obj = (props.positions.length > 0) ? props.positions[props.match.params.jobIndex] : {};
     props.match.params.operationToBePerformed!='general' ? obj.operation='update' : obj.operation=null;
     return(
-        <div>
+        <div className="positionDetail">
             {(props.positions.length > 0) ?
                 <div>
                     <div className="bs-callout">
@@ -27,6 +32,7 @@ const ViewPositionDetails = (props) => {
                         </table>
                     </div>
 
+                    <div><button className="btn-primary" onClick={Back}>Back</button></div>
 
                 </div>
                 : null

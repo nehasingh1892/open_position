@@ -2,10 +2,10 @@
 import {DISPLAY_USERS} from "../../Actions/actionTypes";
 
 
-const  userListReducer  = (state = [], action) => {
+export const  userListReducer  = (state = {}, action) => {
     switch(action.type) {
         case DISPLAY_USERS:
-            return [...action.data]
+            return action.data
         default:
             return state;
     }

@@ -347,3 +347,10 @@ body .LoginWrapper{font-family: Arial, Helvetica, sans-serif;}
 .mar5Per{
     margin: 5%;
 }
+
+.usercard{
+    padding-bottom: 20px;
+}
+.positionDetail .btn-primary{
+    margin-left: 20px;
+}

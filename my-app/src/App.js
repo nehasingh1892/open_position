@@ -5,6 +5,7 @@ import DashboardContainer from './containers/DashboardContainer';
 import AddPositionContainer from './containers/AddPositionContainer';
 import SyncValidationForm from './components/Login';
 import ViewPositionContainer from './components/viewPositionContainer';
+import backup from "./components/backup";
 
 
 class App extends Component {
@@ -13,10 +14,10 @@ class App extends Component {
             <div>
                 <Router>
                     <Switch>
+                        <Route path='/add' component={backup}/>
+                        <Route path='/project/1/update' component={backup}/>
                         <Route path='/project' component={ViewPositionContainer}/>
                         <Route path='/Dashboard' render={({history}) => (<DashboardContainer history = {history}/>)}/>
-                        <Route path='/add' render={({history}) => (<AddPositionContainer history = {history}/>)}/>
-                        {/*<Route path='/update/' render={({history}) => (<AddPositionContainer history = {history}/>)}/>*/}
                         <Route path='/' component={() => (<SyncValidationForm  />)}/>
 
                     </Switch>

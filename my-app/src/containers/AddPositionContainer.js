@@ -4,27 +4,17 @@ import getAllUserDetails from '../Actions/UserListActions';
 import DashboardComponent from "../components/DashboardComponent";
 import getAllUserDetails1 from "../Sagas/TestSaga/testAction";
 import AddPositionForm from "../components/AdminAddPosition"
+import AdminAdd from "../components/AdminAdd";
 
 const mapStateToProps = (state) => {
     return {
-        UpdatelistOfPositions:  state
+        positions:  state.positions
     }
 }
-
-const mapDispatchToProps = dispatch => {
-    return {
-        dispatchAllPosition:(data)=>{
-            dispatch(getAllOpenPositions(data));
-        }
-    }
-}
-
 
 
 
 const AddPositionContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(AddPositionForm);
+    mapStateToProps)(AdminAdd);
 
 export default AddPositionContainer

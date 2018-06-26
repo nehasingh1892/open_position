@@ -147,7 +147,6 @@ class AddPositionForm extends React.Component{
         }else{
             positions.positions[jobindex] = this.state.formData;
         }
-        bake_cookie('DataFromJson', positions);
         this.props.history.push('/Dashboard');
     }
 

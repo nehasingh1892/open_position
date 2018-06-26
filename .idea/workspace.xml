@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="827c38f7-106d-4ebe-ae00-e34f056347fd" name="Default" comment="Committed code for add update positions">
-      <change afterPath="$PROJECT_DIR$/my-app/src/UserData.json" afterDir="false" />
+    <list default="true" id="827c38f7-106d-4ebe-ae00-e34f056347fd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/userListReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/userListReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/DashboardComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/DashboardComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/UserDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/UserDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/containers/AddPositionContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/containers/AddPositionContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/css/myApp.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/css/myApp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/data.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DashboardComponent.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DashboardComponent.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/DashboardComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state relative-caret-position="782">
+              <caret line="127" column="43" lean-forward="true" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -37,22 +37,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDetails.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/components/UserDetails.js">
+      <file leaf-file-name="AdminAddPosition.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            <state relative-caret-position="575">
+              <caret line="235" column="207" lean-forward="true" selection-start-line="235" selection-start-column="207" selection-end-line="235" selection-end-column="236" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="backup.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="backup.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/backup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="71" column="18" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="71" selection-end-column="18" />
+            <state relative-caret-position="-3661">
+              <caret line="87" column="70" lean-forward="true" selection-start-line="87" selection-start-column="70" selection-end-line="87" selection-end-column="70" />
               <folding>
-                <element signature="e#989#2489#0" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,29 +76,59 @@
       <file leaf-file-name="Login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my-app/src/components/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="37" column="15" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="37" selection-end-column="15" />
+            <state relative-caret-position="1054">
+              <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="redux-form.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/node_modules/redux-form/dist/redux-form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="3920" column="4" selection-start-line="3920" selection-start-column="4" selection-end-line="3920" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminAdd.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/components/AdminAdd.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="226" column="105" selection-start-line="226" selection-start-column="105" selection-end-line="226" selection-end-column="105" />
               <folding>
-                <element signature="e#949#2449#0" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/data.json">
+      <file leaf-file-name="viewPositionContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserData.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my-app/src/UserData.json">
+      <file leaf-file-name="PositionListItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/components/PositionListItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="15" column="74" lean-forward="true" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myApp.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my-app/src/css/myApp.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="343" column="14" lean-forward="true" selection-start-line="343" selection-start-column="14" selection-end-line="343" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -99,36 +144,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>validate</find>
-      <find>SyncValidationForm</find>
-      <find>required</find>
-      <find>drop</find>
-      <find>Selectedvalue</find>
-      <find>renderFieldForDropdown</find>
-      <find>glober</find>
-      <find>renderField</find>
-      <find>stopp</find>
-      <find>data</find>
-      <find>getDataFromCookies</find>
-      <find>userFlag</find>
-      <find>displayPosition</find>
-      <find>SubmissionError</find>
-      <find>username</find>
-      <find>{}</find>
-      <find>positions: [</find>
-      <find>positions</find>
-      <find>handleSubmit</find>
-      <find>submit from 'submit'</find>
-      <find>remote</find>
-      <find>submitting</find>
-      <find>submit</find>
-      <find>form-signin</find>
-      <find>Das</find>
-      <find>window</find>
-      <find>window.lo</find>
-      <find>window.location.assign</find>
-      <find>logo</find>
-      <find>setState</find>
+      <find>add</find>
+      <find>jobId</find>
+      <find>title</find>
+      <find>numberOfPositions</find>
+      <find>numberOfPosition</find>
+      <find>location</find>
+      <find>orm</find>
+      <find>backup</find>
+      <find>positionid</find>
+      <find>defaultValue</find>
+      <find>onshoreoffshore</find>
+      <find>back</find>
+      <find>AppliedSuccess</find>
+      <find>onclu</find>
+      <find>getAppliedUsers</find>
+      <find>ShowAppliedUsers</find>
+      <find>alert</find>
+      <find>getusersforposition</find>
+      <find>addpos</find>
+      <find>Adminadd</find>
+      <find>cancelAddForm</find>
+      <find>cancela</find>
+      <find>Apply</find>
+      <find>applyText</find>
+      <find>ApplyUser</find>
+      <find>this.props.positios</find>
+      <find>AddUpdatebtn</find>
+      <find>titl</find>
+      <find>delete</find>
+      <find>this.validate</find>
     </findStrings>
     <replaceStrings>
       <replace>getAllOpenPositions</replace>
@@ -138,7 +183,12 @@
       <replace>this.state.formData</replace>
       <replace>&quot;ReactJS, Redux, CSS3, HTML5 ,Advanced JS&quot;</replace>
       <replace>.</replace>
+      <replace>Change</replace>
+      <replace>value</replace>
       <replace>userID</replace>
+      <replace>this.props.positions</replace>
+      <replace>validate</replace>
+      <replace>validate={this.required}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -171,29 +221,31 @@
         <option value="$PROJECT_DIR$/my-app/src/Reducers/index.js" />
         <option value="$PROJECT_DIR$/my-app/src/Actions/UserListActions.js" />
         <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/testAction.js" />
-        <option value="$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js" />
-        <option value="$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js" />
-        <option value="$PROJECT_DIR$/my-app/src/containers/AddPositionContainer.js" />
         <option value="$PROJECT_DIR$/my-app/src/index.js" />
         <option value="$PROJECT_DIR$/my-app/public/index.html" />
-        <option value="$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js" />
         <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/Header.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/RemoteSubmitButton.js" />
-        <option value="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" />
-        <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/userListReducer.js" />
         <option value="$PROJECT_DIR$/my-app/src/UserData.json" />
         <option value="$PROJECT_DIR$/my-app/src/components/UserDetails.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/initialState.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/FormTest.js" />
-        <option value="$PROJECT_DIR$/my-app/src/App.js" />
-        <option value="$PROJECT_DIR$/my-app/src/css/myApp.css" />
-        <option value="$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/submit.js" />
         <option value="$PROJECT_DIR$/my-app/src/data.json" />
-        <option value="$PROJECT_DIR$/my-app/src/components/backup.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/Login.js" />
+        <option value="$PROJECT_DIR$/my-app/src/Sagas/TestSaga/userListReducer.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/AminAdd.js" />
+        <option value="$PROJECT_DIR$/my-app/src/containers/AddPositionContainer.js" />
+        <option value="$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/AdminAdd.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js" />
+        <option value="$PROJECT_DIR$/my-app/src/css/myApp.css" />
+        <option value="$PROJECT_DIR$/my-app/src/components/PositionListItem.js" />
+        <option value="$PROJECT_DIR$/my-app/src/App.js" />
         <option value="$PROJECT_DIR$/my-app/src/components/DashboardComponent.js" />
+        <option value="$PROJECT_DIR$/my-app/src/components/backup.js" />
       </list>
     </option>
   </component>
@@ -212,8 +264,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="24" />
+    <option name="x" value="95" />
     <option name="width" value="1279" />
     <option name="height" value="696" />
   </component>
@@ -352,7 +403,8 @@
       <workItem from="1528706931634" duration="176000" />
       <workItem from="1528707154608" duration="36000" />
       <workItem from="1528707255355" duration="235000" />
-      <workItem from="1528707862068" duration="59309000" />
+      <workItem from="1528707862068" duration="94850000" />
+      <workItem from="1529521857223" duration="46786000" />
     </task>
     <task id="LOCAL-00001" summary="updated code with add position form and position/userdetails listing">
       <created>1527770501763</created>
@@ -396,60 +448,77 @@
       <option name="project" value="LOCAL" />
       <updated>1528959352888</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Committed code for add update positions">
+      <created>1529305530347</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529305530347</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262511000" />
+    <option name="totallyTimeSpent" value="344838000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18973215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08184524" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.46039605" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.072607264" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.054455444" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.09538951" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.17821783" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.0990099" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Messages" order="0" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.072607264" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.09538951" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21522693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="5" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.46039605" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.089030206" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.072607264" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.46039605" />
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -462,34 +531,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#949#2449#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/Actions/PositionListActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/positionListReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -551,24 +596,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="117" selection-start-line="12" selection-start-column="117" selection-end-line="12" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -586,24 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/positionRequirements.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/saga.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/containers/AddPositionContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -628,38 +645,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/testAction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/userListReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/PositionListItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -691,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/RemoteSubmitButton.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -718,43 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/FormTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="143" column="63" lean-forward="true" selection-start-line="143" selection-start-column="63" selection-end-line="143" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/css/myApp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="255" lean-forward="true" selection-start-line="255" selection-end-line="255" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="150" column="33" lean-forward="true" selection-start-line="150" selection-start-column="33" selection-end-line="150" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/submit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -768,23 +710,6 @@
     <entry file="file://$PROJECT_DIR$/my-app/src/logo.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/backup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="71" column="18" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="71" selection-end-column="18" />
-          <folding>
-            <element signature="e#989#2489#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/UserData.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -792,27 +717,180 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/UserDetails.js">
+    <entry file="file://$PROJECT_DIR$/my-app/src/Sagas/TestSaga/userListReducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="153">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-app/src/components/Login.js">
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/UserDetails.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="37" column="15" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="37" selection-end-column="15" />
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/node_modules/redux-form/es/reduxForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/containers/DashboardContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
           <folding>
-            <element signature="e#949#2449#0" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/containers/AddPositionContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/FormTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="45" selection-start-line="44" selection-end-line="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/positionRequirements.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/ViewPositionDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/css/myApp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="343" column="14" lean-forward="true" selection-start-line="343" selection-start-column="14" selection-end-line="343" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/AdminAddPosition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="235" column="207" lean-forward="true" selection-start-line="235" selection-start-column="207" selection-end-line="235" selection-end-column="236" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/AdminAdd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="226" column="105" selection-start-line="226" selection-start-column="105" selection-end-line="226" selection-end-column="105" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/viewPositionContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/PositionListItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="74" lean-forward="true" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/node_modules/redux-form/dist/redux-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="3920" column="4" selection-start-line="3920" selection-start-column="4" selection-end-line="3920" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-app/src/components/DashboardComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="41" column="46" lean-forward="true" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+        <state relative-caret-position="782">
+          <caret line="127" column="43" lean-forward="true" selection-start-line="127" selection-start-column="43" selection-end-line="127" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="42" lean-forward="true" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-app/src/components/backup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3661">
+          <caret line="87" column="70" lean-forward="true" selection-start-line="87" selection-start-column="70" selection-end-line="87" selection-end-column="70" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

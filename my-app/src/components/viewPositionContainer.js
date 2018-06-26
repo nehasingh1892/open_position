@@ -8,8 +8,7 @@ export default function() {
     return(
         <Switch>
             <Route exact path='/project' component={DashboardContainer}/>
-            <Route path='/project/:jobIndex/general' component={ViewPositionDetails}/>
-            <Route path='/project/:jobIndex/update' component={AddPosition}/>
+            <Route path='/project/:jobIndex' component={ViewPositionDetails}/>
         </Switch>
     );
 }
