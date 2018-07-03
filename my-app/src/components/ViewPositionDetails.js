@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from "prop-types";
 import RequirementRow from "./positionRequirements";
+import Header from '../components/Header'
 
 const ViewPositionDetails = (props) => {
     debugger;
@@ -16,6 +17,7 @@ const ViewPositionDetails = (props) => {
         <div className="positionDetail">
             {(props.positions.length > 0) ?
                 <div>
+                    <Header />
                     <div className="bs-callout">
                         <p>{obj.title}</p>
                         <p>{obj.project}</p>

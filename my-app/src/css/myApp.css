@@ -81,12 +81,10 @@
     width: 67%;
 }
 .panel.panel-success>.panel-heading {
-    cursor: pointer;
-    background-color: #d5eecb;
+    /*cursor: pointer;*/
+    background-color: #c7e2fd!important;
 }
-.panel-success>.panel-heading:hover {
-    box-shadow: 0 0px 4px 3px #9aa4a3;
-}
+
 .panel.panel-success{
     margin-bottom: 0!important;
     margin-top: 20px !important
@@ -99,8 +97,6 @@
 }
 .bs-callout {
     padding-bottom: 5px;
-    border-left-width: 5px;
-    border-left-color: #45a247;
     margin-bottom: 20px;
 }
 .bs-callout p {
@@ -353,4 +349,12 @@ body .LoginWrapper{font-family: Arial, Helvetica, sans-serif;}
 }
 .positionDetail .btn-primary{
     margin-left: 20px;
+}
+
+padding-bottom20{
+    padding-bottom: 20px;
+}
+
+margin-bottom20{
+    margin-bottom: 20px!important;
 }

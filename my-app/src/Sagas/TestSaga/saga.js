@@ -34,8 +34,8 @@ function* mySaga() {
   dispatched while a fetch is already pending, that pending fetch is cancelled
   and only the latest one will be run.
 */
-function* mySaga() {
+/*function* mySaga() {
     yield takeLatest(DISPLAY_POSITIONS, fetchPosition);
-}
+}*/
 
 export default mySaga;

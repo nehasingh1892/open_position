@@ -1,4 +1,6 @@
 import React from 'react';
+import { RingLoader } from 'react-spinners';
+
 var axios = require('axios');
 class App extends React.Component {
 
@@ -9,7 +11,8 @@ class App extends React.Component {
         this.state =
             {
                 username :"",
-                pass:""
+                pass:"",
+                loading: false
             }
         this.getUser = this.getUser.bind(this);
         this.getPass = this.getPass.bind(this);
@@ -22,7 +25,7 @@ class App extends React.Component {
     }
     servicecall = function(){
 
-
+        this.setState({loading: true});
         axios.post(' http://10.221.6.36:3000/users/login', {
 
             userid: this.state.username,
@@ -42,6 +45,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="container">
+
                 <div className="row">
                     <div className="col-sm-6 col-md-4 col-md-offset-4">
                         <h1 className="text-center login-title">Login Detail</h1>
@@ -65,7 +69,10 @@ class App extends React.Component {
                                 <div>
                                     <button onClick  = {this.servicecall}>Login</button>
                                 </div>
-
+                                <RingLoader
+                                    color={'#123abc'}
+                                    loading={this.state.loading}
+                                />
 
                             </form>
                         </div>

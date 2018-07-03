@@ -2,13 +2,12 @@ import React from 'react';
 import PositionListItem from './PositionListItem';
 import '../data.json';
 import  axios from 'axios';
-import { bake_cookie, read_cookie, delete_cookie } from 'sfcookies';
-import getAllUserDetails1 from "../Sagas/TestSaga/testAction";
-import getAllOpenPositions from '../Actions/PositionListActions';
 import Header from './Header';
 import './testPOCimg.jpg';
-import UserDetails from './UserDetails';
-import Backup from './backup'
+import Backup from './backup';
+import AppliedUserModal from '../components/AppliedUserModal'
+
+let displayAppliedUser='';
 
 class DashboardComponent extends React.Component{
 
@@ -16,29 +15,32 @@ class DashboardComponent extends React.Component{
         super(props);
 
         this.addPositions = this.addPositions.bind(this);
-        this.getPositionDetails = this.getPositionDetails.bind(this);
         this.deletePosition = this.deletePosition.bind(this);
-        // this.AppliedSuccess = this.AppliedSuccess.bind(this);
         this.updateOpenPosition = this.updateOpenPosition.bind(this);
         this.cancelAddForm = this.cancelAddForm.bind(this);
         this.ApplyUser = this.ApplyUser.bind(this);
         this.ShowAppliedUsers1 = this.ShowAppliedUsers1.bind(this);
-        // this.getAppliedUsers = this.getAppliedUsers.bind(this);
         this.state=  { showResults: false,
             applyText: "Apply for this position",
             AddComponent:'hide',
+            ShowHidePosition: 'hide',
             clickedPosition: ' ',
             AddUpdatebtn: ' ',
-            AppliedUsers: ' '
+            AppliedUsers: ' ',
+            Applied_Users : [],
+            showModal : 'hide'
         };
     }
 
     componentDidMount(){
+        if(!sessionStorage.getItem("LoginUser")){
+            alert('Redirecting to login screen. please login and continue!!!!');
+            window.location.assign('/');
+        }
         const that=this;
         const userDetails = sessionStorage.getItem("LoginUser");
         const userDetailsJson = JSON.parse(userDetails);
 
-                //localStorage.setItem('DataFromJson',JSON.stringify(json));
 
         axios.post(' http://10.221.6.36:3000/users/userdetails', {
             userid: userDetailsJson[0].userid,
@@ -52,8 +54,6 @@ class DashboardComponent extends React.Component{
                     .then(response => response.json())
                     .then(json => {
                         that.props.dispatchAllOpenPositions(json);
-                        bake_cookie('DataFromJson', json);
-                        //localStorage.setItem('DataFromJson',JSON.stringify(json));
                     })
                     .catch(error => {console.log(error);});
             })
@@ -85,12 +85,6 @@ class DashboardComponent extends React.Component{
                 AddUpdatebtn: 'update'
             });
     }
-
-    getPositionDetails(event, jobIndex){
-         debugger;
-        event.stopPropagation();
-        this.props.history.push('/project/'+jobIndex) ;
-     }
 
     deletePosition(event, PositionToBeDeleted) {
         event.stopPropagation();
@@ -137,14 +131,20 @@ class DashboardComponent extends React.Component{
     }
     ShowAppliedUsers1(positionID){
         debugger;
+        const that = this;
+        let displayAppliedUser = '';
         axios.post(' http://10.221.6.36:3000/users/getusersforposition', {
             positionid: positionID,
         })
             .then(function (response) {
-                console.log(response.data);
-                alert(JSON.stringify(response.data));
 
+                that.setState({
 
+                    Applied_Users :  response.data,
+                    showModal : 'show',
+                })
+                console.log(that.state.Applied_Users);
+                that.forceUpdate();
 
             })
             .catch(function (error) {
@@ -159,13 +159,15 @@ class DashboardComponent extends React.Component{
         const displayPosition= that.props.listOfPositions.positions.map((item, index) => {
             return (
                 <div>
-                    <PositionListItem key={index} onClick={this.getPositionDetails} position={item} users={this.props.userInfo.userDetails}  ApplyText={this.state.applyText} jobIndex={index} deleteThisTask={this.deletePosition} updatePosition={this.updateOpenPosition} ApplyUser={this.ApplyUser} role={this.props.userInfo.userDetails.role}/>
-                    {this.props.userInfo.userDetails.role === "User" ?  " " : <div><button className="btn-primary" onClick={() => (this.ShowAppliedUsers1(item.positionid))}>Applied Users</button></div>}
+                    <PositionListItem key={index} position={item} users={this.props.userInfo.userDetails} ShowHideFlag ={this.state.ShowHidePosition} ApplyText={this.state.applyText} jobIndex={index} deleteThisTask={this.deletePosition} updatePosition={this.updateOpenPosition} ApplyUser={this.ApplyUser} role={this.props.userInfo.userDetails.role}/>
+                    {this.props.userInfo.userDetails.role === "User" ?  " " : <div> <button type="button" className="btn btn-primary" onClick={() => (this.ShowAppliedUsers1(item.positionid))} data-toggle="modal"
+                                                                                            data-target="#myModal">Applied Users
+                    </button></div>}
+
 
                 </div>
             )
         });
-
 
 
 
@@ -175,8 +177,6 @@ class DashboardComponent extends React.Component{
                 <div className="main-container">
                     <div className="left-container">
                           <div className="card">
-                                {/*<img src="testPOCimg.jpg" alt="John"/>*/}
-
                               <div className="glober-image">
                                   <img alt="glober" className="img-circle"
                                        src="https://ssl.gstatic.com/s2/profiles/images/silhouette200.png" />
@@ -198,6 +198,8 @@ class DashboardComponent extends React.Component{
                             <div>{(this.props.userInfo.userDetails.role) === "Admin" ?  <button onClick={this.addPositions} type="button" className="btn btn-primary addposition">
                                 Add position
                             </button> : ""}</div>
+
+                           <AppliedUserModal isOpen={this.state.showModal} Applied_Users={this.state.Applied_Users}/>
                             <div>{this.state.showResults ?  <div type="button" className="alert alert-success">
                                 Applied Successfully!!
                             </div> : ""}</div>

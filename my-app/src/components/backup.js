@@ -2,9 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import {bake_cookie, read_cookie} from "sfcookies";
 import axios from "axios/index";
-import Header from '../components/Header'
 
 class AdminAdd extends React.Component{
 
@@ -33,13 +31,11 @@ class AdminAdd extends React.Component{
             jobId : !checkPosition ? this.props.positions.jobId : '',
             location: !checkPosition ? this.props.positions.location : '',
             description : !checkPosition ? this.props.positions.description : TempValue,
-
             OnshoreOffshore : !checkPosition ? this.props.positions.OnshoreOffshore:'',
             title: !checkPosition ? this.props.positions.title :'',
             seniorityLevel: !checkPosition ? this.props.positions.seniorityLevel :'',
             positionDescription: !checkPosition ? this.props.positions.positionDescription: TempValue,
             skills: !checkPosition ? this.props.positions.skills: TempValue
-
         }
         this.setState({formData:initialValues,Selectedvalue:initialValues});
     }
@@ -71,15 +67,8 @@ class AdminAdd extends React.Component{
                 positions[name] = event.target.value;
                 this.setState({formData:positions});
             }
-
         }
-
-
-
-
-
-
-    }
+ }
 
     handleSubmit(){
         console.log('inside submit method');
@@ -94,7 +83,7 @@ class AdminAdd extends React.Component{
                 numberOfPositions : document.getElementById('numberOfPosition').defaultValue ,
                 OnshoreOffshore : 'Offshore',
                 skills : document.getElementById('skills').defaultValue ,
-                positionid: '200',
+                positionid: document.getElementById('positionid').defaultValue,
                 positionDescription : document.getElementById('positionDesc').defaultValue,
                 seniorityLevel : 'Junior',
 
@@ -107,7 +96,7 @@ class AdminAdd extends React.Component{
 
                 });
         }
-else{
+        else{
             axios.post(' http://10.221.6.36:3000/users/updateposition', {
                 project : document.getElementById('projname').defaultValue,
                 description : document.getElementById('projDesc').defaultValue,
@@ -117,7 +106,7 @@ else{
                 numberOfPositions : document.getElementById('numberOfPosition').defaultValue ,
                 OnshoreOffshore : this.props.positions.OnshoreOffshore,
                 skills : document.getElementById('skills').defaultValue ,
-                positionid: this.props.positions.positionid,
+                positionid: document.getElementById('positionid').defaultValue,
                 positionDescription : document.getElementById('positionDesc').defaultValue,
                 seniorityLevel : this.props.positions.seniorityLevel,
 
@@ -130,11 +119,7 @@ else{
 
                 });
         }
-
-
-
-
-    }
+ }
 
     required = value => (value ? undefined : 'Required')
 
@@ -146,13 +131,13 @@ else{
                            defaultValue,
                            min,
                            placeholder,
-                           className,rows,validate,
+                           className,rows,
                            meta: { touched, error, warning }}) {
         return (
             <div>
                 <label>{label}</label>
                 <div>
-                    <input {...input} label={label} validate={validate} type={type} id={id} min={min} value={defaultValue} />
+                    <input {...input} label={label} type={type} id={id} min={min} value={defaultValue} />
                     {touched &&
                     ((error && <span><br/>{error}</span>) ||
                         (warning && <span>{warning}</span>))}
@@ -233,31 +218,6 @@ else{
             { value: 'Anywhere', label: 'Anywhere' },
 
         ]
-        const TitleOptions = [
-            { value: 'DEV | Java', label: 'DEV | Java' },
-            { value: 'DEV | Web UI', label: 'DEV | Web UI', className: 'myOptionClassName' },
-            { value: 'Dev | Android Developer', label: 'Dev | Android Developer', className: 'myOptionClassName' },
-            { value: 'Dev | iOS Developer', label: 'Dev | iOS Developer' },
-            { value: 'DEV | Drupal', label: 'DEV | Drupal' },
-            { value: 'DEV | Others', label: 'DEV | Others' },
-            { value: 'DEV | Technical Director (Mobile / CMS / DMS / Java / UI)', label: 'DEV | Technical Director (Mobile / CMS / DMS / Java / UI)', className: 'myOptionClassName' },
-            { value: 'Dev | Gaming', label: 'Dev | Gaming', className: 'myOptionClassName' },
-            { value: 'QA | QC Analyst', label: 'QA | QC Analyst' },
-            { value: 'DEV | AEM', label: 'DEV | AEM' },
-            { value: 'DEV | PHP', label: 'DEV | PHP' },
-            { value: 'DEV | SalesForce', label: 'DEV | SalesForce' },
-            { value: 'DEV | Netsuite', label: 'DEV | Netsuite' },
-            { value: 'QA | Test Automation Engineer', label: 'QA | Test Automation Engineer' },
-            { value: 'CLOUDOPS | DevOps Engineer', label: 'CLOUDOPS | DevOps Engineer' },
-            { value: 'CLOUDOPS | Technical Director', label: 'CLOUDOPS | Technical Director' },
-            { value: 'DESIGN | User Experience', label: 'DESIGN | User Experience' },
-            { value: 'DESIGN | Visual Designer', label: 'DESIGN | Visual Designer' },
-            { value: 'OPS | Project Manager', label: 'OPS | Project Manager' },
-            { value: 'OPS | Business Analyst', label: 'OPS | Business Analyst' },
-            { value: 'Sales | Client Partner', label: 'Sales | Client Partner' },
-            { value: 'Digital Marketing Strategist', label: 'Digital Marketing Strategist' },
-            { value: 'Others', label: 'Others' },
-        ]
         const TitleOptionsTest = [
             { value: 'DEV | Java', label: 'DEV | Java' },
             { value: 'UI | Java', label: 'UI  | Java' },
@@ -305,6 +265,9 @@ else{
                                     <Field Change={this.handleFieldChange} validate={this.required} component={this.renderFieldForTextarea} rows="4" className="form-control rounded-0" name="skills" id="skills"  label="Skills Required" defaultValue={this.state.formData.skills}/>
                                 </div>
                                 <div className="form-group">
+                                    <Field  id="positionid"  validate={this.required} onChange={this.handleFieldChange}  className="form-control" min="0" type="number" name="positionid" component={this.renderFieldForText} label="Position ID" defaultValue={this.state.formData.positionid}/>
+                                </div>
+                                <div className="form-group">
                                     <Field  id="numberOfPosition"  validate={this.required} onChange={this.handleFieldChange}  className="form-control" min="0" type="number" name="numberOfPositions" component={this.renderFieldForText} label="Number Of Positions" defaultValue={this.state.formData.numberOfPositions}/>
                                 </div>
                                 <div className="form-group">
@@ -319,7 +282,6 @@ else{
                                         Submit
                                     </button>
                                     <button type="button" className="btn btn-default" onClick={this.props.cancelAddForm.bind(this)} >
-                                        {/*onClick={this.props.cancelAddForm.bind(this)}*/}
                                         Cancel
                                     </button>
                                 </div>
@@ -332,17 +294,10 @@ else{
             </div>
         );
     }
-
-
-
-
 }
 
 export default reduxForm({
     form: 'syncValidation', // a unique identifier for this form
-    //validate, // <--- validation function given to redux-form
-    // warn, // <--- warning function given to redux-form
-
 })(AdminAdd)
 
 
